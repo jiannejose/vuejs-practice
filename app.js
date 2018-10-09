@@ -9,6 +9,8 @@ new Vue({
         x: 0,
         y: 0,
         number: 10,
+        enteredName: '',
+        enteredAge: '',
         color: '',
         fruit: '',
         myNumber: 20,
@@ -19,31 +21,49 @@ new Vue({
         greet: function(time) {
             return `Good ${time}, ${this.name}!`;
         },
+
         addAge: function(inc) {
             this.age += inc;
         },
+
         subtractAge: function(dec) {
             this.age -= dec;
         },
+
         updateXY: function(event) {
             this.x = event.offsetX;
             this.y = event.offsetY;
         },
+
         addNum: function(inc) {
             this.number += inc;
         },
+
         dontVisit: function() {
             alert('You can\'t!');
             console.log('Told \'ya! You won\'t be able to reach the site because of the .prevent modifier.');
         },
+
         logName: function() {
-            console.log('You entered your name.');
+            console.log(`You entered your name. Your name is ${this.enteredName}.`);
         },
+
         logAge: function() {
-            console.log('You entered your age.');
+            console.log(`You entered your age. You are ${this.enteredAge} years old.`);
         },
+
+
+    },
+
+    computed: {
         addToA: function() {
-            this.myNumber + this.a;
+            console.log('addToA');
+            return this.myNumber + this.a;
+        },
+
+        addToB: function() {
+            console.log('addToB');
+            return this.myNumber + this.b;
         }
     }
 });
