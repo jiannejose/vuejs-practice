@@ -16,6 +16,8 @@ new Vue({
         myNumber: 20,
         a: 0,
         b: 0,
+        available: false,
+        nearby: false,
     },
     methods: {
         greet: function(time) {
@@ -64,6 +66,13 @@ new Vue({
         addToB: function() {
             console.log('addToB');
             return this.myNumber + this.b;
+        },
+
+        compClasses: function() {
+            return {
+                available: this.available,
+                nearby: this.nearby
+            }
         }
     }
 });

@@ -18,7 +18,7 @@
         <p>Visit my website @ <a v-bind:href="website">The Net Ninja</a>.</p>
         <!-- Can also be written as :value="job" :href="website" -->
 
-        <p>You can also contact me @ <span v-html="websiteTag"></span>.</p>
+        <p>You can also contact me @ <p v-html="websiteTag"></p>.</p>
         <br />
 
         <h1>Events</h1>
@@ -58,22 +58,39 @@
         <h1>Two-Way Data Binding</h1>
         <label>Color:</label>
         <input type="text" v-model="color" /> <br />
-        <span>{{ color }}</span>
+        <p>{{ color }}</p>
         <br />
         <br />
         <label>Fruit:</label> 
         <input type="text" v-model="fruit" /> <br />
-        <span>{{ fruit }}</span>
+        <p>{{ fruit }}</p>
         <br />
         <br />
         
         <h1>Computed Properties</h1>
+        <!-- Will only run addToA function when Add to A button is clicked. And will only run addToB function when Add to B button is clicked. -->
         <button v-on:click="a++">Add to A</button>
         <button v-on:click="b++">Add to B</button>
         <p>A ~ {{ a }}</p>
         <p>B ~ {{ b }}</p>
         <p>My Number + A = {{ addToA }} </p>
         <p>My Number + B = {{ addToB }}</p>
+        <br />
+        <br />
+
+        <h1>Dynamic CSS</h1>
+        <h3>Example #1</h3>
+        <div v-on:click="available = !available" v-bind:class="{available: available}">
+            <span>Grab Taxi</span>
+        </div>
+
+        <h3>Example #2</h3>
+        <button v-on:click="available = !available">Toggle Available</button>
+        <button v-on:click="nearby = !nearby">Toggle Nearby</button>
+        <div v-bind:class="compClasses">
+            <span>Grab Car</span>
+        </div>
+
     </div>
 
     <script src="app.js"></script>
