@@ -91,6 +91,25 @@
             <span>Grab Car</span>
         </div>
 
+        <h1>Conditionals</h1>
+        <h3>if and else-if</h3>
+        <!-- The p tag that has the if and else if condition and is being removed from the DOM when toggled. -->
+        <button v-on:click="error = !error">Toggle Error</button>
+        <button v-on:click="success = !success">Toggle Success</button>
+        <div style="height: 50px;">
+            <p v-if="error">There has been an error.</p>
+            <p v-else-if="success">Success!</p>
+        </div>
+
+        <h3>show</h3>
+        <!-- The p tag that has the show is not being removed from the DOM; a style of display:none is just being added. -->
+        <button v-on:click="hi = !hi">Toggle Hi!</button>
+        <button v-on:click="hello = !hello">Toggle Hello!</button>
+        <div style="height: 50px;">
+            <p v-show="hi">Hi!</p>
+            <p v-show="hello">Hello!</p>
+        </div>
+
     </div>
 
     <script src="app.js"></script>

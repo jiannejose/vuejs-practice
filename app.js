@@ -18,6 +18,11 @@ new Vue({
         b: 0,
         available: false,
         nearby: false,
+        error: false,
+        success: false,
+        hi: false,
+        hello: false,
+        
     },
     methods: {
         greet: function(time) {
