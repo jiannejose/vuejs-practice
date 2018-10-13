@@ -19,7 +19,7 @@
         <h3>Using v-bind or :</h3>
         <p><b>Job:</b> <input type="text" v-bind:value="job"></p>
         <p>Visit my website @ <a v-bind:href="website">The Net Ninja</a>.</p>
-        <!-- Can also be written as :value="job" :href="website" -->
+        <p class="info">Can also be written as :value="job" :href="website"</p>
 
         <h3>Using v-html</h3>
         <p>You can also contact me @ <p v-html="websiteTag"></p>.</p>
@@ -36,7 +36,7 @@
         <button @dblclick="addAge(100)">Be a Vampire!</button>
         <button v-on:dblclick="subtractAge(100)">Back to Normal</button>
         <br />
-        <!-- v-on: can be written as @ -->
+        <p class="info">v-on: can be written as @</p>
 
         <div class="canvas" v-on:mousemove="updateXY">
             {{ x }}, {{ y }}
@@ -59,8 +59,8 @@
         <br />
         <label>Age:</label>
         <input type="text" v-on:keypress.enter="logAge" v-model="enteredAge" />
-        <!-- keyup - triggered when releases the key. -->
-        <!-- keypress and keydown - triggered while the key is being pressed. -->
+        <p class="info">keyup - triggered when releases the key.</p>
+        <p class="info">keypress and keydown - triggered while the key is being pressed.</p>
 
         <h1>Two-Way Data Binding</h1>
         <h3>Using v-model</h3>
@@ -76,7 +76,7 @@
         <br />
         
         <h1>Computed Properties</h1>
-        <!-- Will only run addToA function when Add to A button is clicked. And will only run addToB function when Add to B button is clicked. -->
+        <p class="info">Will only run addToA function when Add to A button is clicked. And will only run addToB function when Add to B button is clicked.</p>
         <button v-on:click="a++">Add to A</button>
         <button v-on:click="b++">Add to B</button>
         <p>A ~ {{ a }}</p>
@@ -109,8 +109,8 @@
             <p v-else-if="success">Success!</p>
         </div>
 
-        <h3>USing v-show</h3>
-        <!-- The p tag that has the show is not being removed from the DOM; a style of display:none is just being added. -->
+        <h3>Using v-show</h3>
+        <p class="info">The p tag that has the show is not being removed from the DOM; a style of display:none is just being added.</p>
         <button v-on:click="hi = !hi">Toggle Hi!</button>
         <button v-on:click="hello = !hello">Toggle Hello!</button>
         <div style="height: 50px;">

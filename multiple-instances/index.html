@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Vue JS</title>
+    <title>Vue Instances</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 </head>
@@ -21,6 +21,21 @@
         <p>{{ greet }}</p>
         <button v-on:click="changeTitle">Change App One's Title</button>
         <button v-on:click="changeBackTitle">Change Back App One's Title</button>
+        <p class="info">The Vue App Two can change the title of the Vue App One because the two instances can share data.</p>
+    </div>
+
+    <h1>Components</h1>
+    <p class="info">Components are reusable pieces of code or templates that can be used in different Vue Instances.</p>
+    <div id="vue-app-first">
+        <h4>{{ title }}</h4>
+        <information></information>
+        <p class="info">This information above was just entered on the markup by an information tag, which is the name of the component being called.</p>
+    </div>
+
+    <div id="vue-app-second">
+        <h4>{{ title }}</h4>
+        <information></information>
+        <p class="info">This information above was just entered on the markup by an information tag, which is the name of the component being called.</p>
     </div>
 
     <script src="./app.js"></script>

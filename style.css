@@ -35,3 +35,9 @@ span {
   content: 'nearby';
   margin-left: 10px;
 }
+
+.info {
+  color: #22B830;
+  font-size: 14px;
+  font-style: italic;
+}

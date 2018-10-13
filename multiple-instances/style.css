@@ -10,3 +10,9 @@ h1 {
 h2 {
   color: #F588C6;
 }
+
+.info {
+  color: #22B830;
+  font-size: 14px;
+  font-style: italic;
+}
