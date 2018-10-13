@@ -11,17 +11,23 @@
 <body>
     <div class="vue-app">
         <h1>Data Binding</h1>
+        
+        <h3>Using {{}}</h3>
         <h2>{{ greet('evening') }}</h2>
         <p><b>Name</b>: {{ name }}</p>
 
+        <h3>Using v-bind or :</h3>
         <p><b>Job:</b> <input type="text" v-bind:value="job"></p>
         <p>Visit my website @ <a v-bind:href="website">The Net Ninja</a>.</p>
         <!-- Can also be written as :value="job" :href="website" -->
 
+        <h3>Using v-html</h3>
         <p>You can also contact me @ <p v-html="websiteTag"></p>.</p>
         <br />
 
         <h1>Events</h1>
+        
+        <h3>Mouse Events </h3>
         <p>My age is <b>{{ age }}</b>.</p>
         <button @click="addAge(1)">Add a Year</button>
         <button v-on:click="subtractAge(1)">Subtract a Year</button>
@@ -47,6 +53,7 @@
         <a v-on:click.prevent="dontVisit" :href="website">You won't be able to reach the Net Ninja site.</a>
 
         <h1>Keyboard Events</h1>
+        <h3>Using v-on:keypress, v-on:keyup, v-on:keydown</h3>
         <label>Name:</label>
         <input type="text" v-on:keydown.enter="logName" v-model="enteredName" /> <br />
         <br />
@@ -56,6 +63,7 @@
         <!-- keypress and keydown - triggered while the key is being pressed. -->
 
         <h1>Two-Way Data Binding</h1>
+        <h3>Using v-model</h3>
         <label>Color:</label>
         <input type="text" v-model="color" /> <br />
         <p>{{ color }}</p>
@@ -92,7 +100,7 @@
         </div>
 
         <h1>Conditionals</h1>
-        <h3>if and else-if</h3>
+        <h3>Using v-if and v-else-if</h3>
         <!-- The p tag that has the if and else if condition and is being removed from the DOM when toggled. -->
         <button v-on:click="error = !error">Toggle Error</button>
         <button v-on:click="success = !success">Toggle Success</button>
@@ -101,7 +109,7 @@
             <p v-else-if="success">Success!</p>
         </div>
 
-        <h3>show</h3>
+        <h3>USing v-show</h3>
         <!-- The p tag that has the show is not being removed from the DOM; a style of display:none is just being added. -->
         <button v-on:click="hi = !hi">Toggle Hi!</button>
         <button v-on:click="hello = !hello">Toggle Hello!</button>
@@ -110,6 +118,38 @@
             <p v-show="hello">Hello!</p>
         </div>
 
+        <h1>Looping through Lists</h1>
+        <h3>Regular looping in array of strings.</h3>
+        <ul>
+            <li v-for="character in characters">{{ character }}</li>
+        </ul>
+
+        <h3>Looping in array of objects.</h3>
+        <ul>
+            <li v-for="ninja in ninjas">
+                <p>Name: {{ ninja.name }}</p>
+                <p>Age: {{ ninja.age }}</p>
+            </li>
+        </ul>
+
+        <h3>Looping with showing of index.</h3>
+        <ul>
+            <li v-for="(ninja, index) in ninjas">
+                {{ index+1 }}. {{ ninja.name }} - {{ ninja.age }}
+            </li>
+        </ul>
+
+        <h3>Looping without using ul or div. This is if you don't want to add a markup to the DOM.</h3>
+        <template v-for="(ninja, index) in ninjas">
+            <h4>Ninja No. {{ index + 1 }}</h4>
+            <p>Name: {{ ninja.name }}</p>
+            <p>Age: {{ ninja.age }}</p>
+        </template>
+
+        <h3>Looping through an object.</h3>
+        <template v-for="ninja in ninjas">
+            <p v-for="(key, val) in ninja">{{ key }} - {{ val }}</p>
+        </template>
     </div>
 
     <script src="app.js"></script>
