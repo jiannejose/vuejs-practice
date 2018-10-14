@@ -150,6 +150,12 @@
         <template v-for="ninja in ninjas">
             <p v-for="(key, val) in ninja">{{ key }} - {{ val }}</p>
         </template>
+
+        <h1>Refs</h1>
+        <label for="food">Enter your favorite food.</label> <br/>
+        <input type="text" id="food" ref="inputText"> <br/>
+        <button v-on:click="readInputTextRef">Submit</button>
+        <p>Your favorite food is: {{ food }} </p>
     </div>
 
     <script src="app.js"></script>

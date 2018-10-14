@@ -28,6 +28,7 @@ new Vue({
             { name: 'Yoshi', age: 35 },
             { name: 'Ken', age: 45 }
         ],
+        food: '',
         
     },
     methods: {
@@ -65,6 +66,10 @@ new Vue({
             console.log(`You entered your age. You are ${this.enteredAge} years old.`);
         },
 
+        readInputTextRef: function() {
+            console.log(this.$refs.inputText.value);
+            this.food = this.$refs.inputText.value;
+        }
 
     },
 
