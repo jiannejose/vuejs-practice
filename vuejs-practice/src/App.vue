@@ -1,27 +1,39 @@
 <template>
   <div>
     <h1>{{ title }}</h1>
-    <h3>{{ greeting('evening', 'Ji') }}</h3>
+    <ninjas></ninjas>
   </div>
 </template>
 
 <script>
-export default {
+// This is how to import locally 
+import Ninjas from './Ninjas.vue'
+//*
 
+export default {
+  //*
+  components: {
+    'ninjas': Ninjas
+  },
+  //*
   data: function() {
     return {
-      title: 'First Vue File',
-    }
-  },
-
-  methods: {
-    greeting: function(time, name) {
-      return `Good ${time}, ${name}!`;
+      title: 'Ninja App',
     }
   }
 }
 </script>
 
 <style>
+  body {
+    font-family: Helvetica, sans-serif;
+  }
+  h1 {
+    color: #ED55A4;
+    text-transform: uppercase;
+  }
 
+  h3 {
+    color: #984ACC;
+  }
 </style>

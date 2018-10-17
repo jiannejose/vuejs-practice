@@ -1,5 +1,9 @@
 import Vue from 'vue'
 import App from './App.vue'
+// import Ninjas from './Ninjas.vue'
+
+// Vue.component('ninjas', Ninjas);
+// This is imported globally
 
 new Vue({
   el: '#app',
