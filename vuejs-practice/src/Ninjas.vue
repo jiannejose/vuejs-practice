@@ -18,3 +18,12 @@ export default {
 }
 </script>
 
+
+// When a scoped is added to a style tag, all the styles inside it will only be applicable to its component.
+<style scoped>
+    h3 {
+        color: #22B830;
+    }
+</style>
+
+
