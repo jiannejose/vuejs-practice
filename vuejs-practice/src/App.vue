@@ -8,12 +8,14 @@
 <script>
 // This is how to import locally 
 import Ninjas from './Ninjas.vue'
+import Header from './components/Header.vue'
 //*
 
 export default {
   //*
   components: {
-    'ninjas': Ninjas
+    'ninjas': Ninjas,
+    'app-header': Header
   },
   //*
   data: function() {
