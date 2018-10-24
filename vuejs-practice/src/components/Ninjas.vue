@@ -23,6 +23,20 @@ export default {
 <style scoped>
     h3 {
         color: #22B830;
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+    }
+
+    ul {
+        list-style: none;
+        text-align: center;
+        padding-left: 0;
+    }
+
+    li {
+        display: block;
+        padding: 5px 0;
     }
 </style>
 
