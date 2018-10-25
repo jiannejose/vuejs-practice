@@ -33,6 +33,7 @@ export default {
 <style>
   body {
     font-family: Helvetica, sans-serif;
+    margin: 0;
   }
   h1 {
     color: #ED55A4;
