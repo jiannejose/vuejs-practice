@@ -3,6 +3,10 @@
     <app-header></app-header>
     
     <app-ninjas v-bind:ninjas="ninjas"></app-ninjas>
+
+    <hr />
+    
+    <app-ninjas v-bind:ninjas="ninjas"></app-ninjas>
     
     <app-footer></app-footer>
   </div>
@@ -14,7 +18,6 @@ import Header from './components/Header.vue';
 import Ninjas from './components/Ninjas.vue';
 import Footer from './components/Footer.vue';
 
-//*
 
 export default {
   components: {
@@ -36,6 +39,13 @@ export default {
     }
   }
 }
+
+/**
+Notes:
+ Primitive types are Strings, Booleans, and Numbers.
+ Reference Types are Objects and Arrays
+
+*/
 </script>
 
 <style>
@@ -52,3 +62,4 @@ export default {
     color: #984ACC;
   }
 </style>
+
