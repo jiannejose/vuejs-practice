@@ -1,5 +1,5 @@
 <template>
-    <div id="ninjas">
+    <div id="ninjasList">
         <ul>
             <li v-for="ninja in ninjas" v-on:click="ninja.show = !ninja.show">
                 <h2>{{ ninja.name }}</h2>
@@ -12,6 +12,7 @@
 <script>
 export default {
     props: ['ninjas'],
+    // validation of props
     // props: {
     //     ninjas: {
     //         type: Array,
@@ -22,14 +23,20 @@ export default {
         return {
                  
         }
-    }
+    },
+    // may also call the props this way.
+    // methods: {
+    //     test: function() {
+    //         this.ninjas;
+    //     }
+    // }
 }
 </script>
 
 
 // When a scoped is added to a style tag, all the styles inside it will only be applicable to its component.
 <style scoped>
-    #ninjas {
+    #ninjasList {
         width: 100%;
         max-width: 1200px;
         margin: 40px auto;
