@@ -1,14 +1,14 @@
 <template>
   <div>
-    <app-header></app-header>
+    <app-header v-bind:title="title"></app-header>
     
     <app-ninjas v-bind:ninjas="ninjas"></app-ninjas>
 
-    <hr />
+    <!-- <hr />
     
-    <app-ninjas v-bind:ninjas="ninjas"></app-ninjas>
+    <app-ninjas v-bind:ninjas="ninjas"></app-ninjas> -->
     
-    <app-footer></app-footer>
+    <app-footer v-bind:copyright="copyright" v-bind:title="title"></app-footer>
   </div>
 </template>
 
@@ -35,7 +35,9 @@ export default {
           {name: 'Tango', speciality: 'Conditionals', show: false},
           {name: 'Kami', speciality: 'Webpack', show: false},
           {name: 'Yoshi', speciality: 'Data Diggin', show: false},
-      ]  
+      ],
+      title: 'Vue JS Tutorial for Ninjas',
+      copyright: 'Copyright 2018',
     }
   }
 }
