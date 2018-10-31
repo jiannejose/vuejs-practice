@@ -1,6 +1,6 @@
 <template>
   <div>
-    <app-header v-bind:title="title"></app-header>
+    <app-header v-bind:title="title" v-on:changeTitle="updateTitle($event)"></app-header>
     
     <app-ninjas v-bind:ninjas="ninjas"></app-ninjas>
 
@@ -38,6 +38,12 @@ export default {
       ],
       title: 'Vue JS Tutorial for Ninjas',
       copyright: 'Copyright 2018',
+    }
+  },
+
+  methods: {
+    updateTitle: function() {
+      this.title = updatedTitle;
     }
   }
 }

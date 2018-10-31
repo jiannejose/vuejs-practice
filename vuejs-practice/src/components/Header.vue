@@ -9,6 +9,7 @@ export default {
     props: {
         title: {
             type: String,
+            required: true,
         }
     },
 
@@ -21,7 +22,7 @@ export default {
     methods: {
         
         changeTitle: function() {
-            this.title = 'Vue JS Tutorial';
+            this.$emit('changeTitle', 'Vue JS Tutorial');
         }
     }
 }
